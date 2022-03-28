@@ -1,0 +1,22 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Username</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let customer of customers; let i = index">
+      <tr>
+        <th scope="row">{{i+1}}</th>
+        <td>{{customer.username}}</td>
+        <td>
+          <button class="btn btn-primary" (click)="seeDetails(customer)">
+            details
+          </button>
+        </td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
